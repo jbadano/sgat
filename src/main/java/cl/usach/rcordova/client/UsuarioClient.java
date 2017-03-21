@@ -6,10 +6,10 @@ import javax.ws.rs.core.Form;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-public class StudentClient implements StudentClientInterface {
+public class UsuarioClient implements UsuarioClientInterface {
 	private WebTarget target;
 
-	public StudentClient(WebTarget target) {
+	public UsuarioClient(WebTarget target) {
 		this.target = target;
 	}
 
@@ -19,12 +19,12 @@ public class StudentClient implements StudentClientInterface {
 	}
 
 	public Response postSignup(String userName, String password,
-			String firstName, String lastName, String dateOfBirth,
+			String nombre, String apellido, String fechaNacimiento,
 			String emailAddress) throws Exception {
 		
 		Form form = new Form().param("userName", userName)
-				.param("password", password).param("firstName", firstName)
-				.param("lastName", lastName).param("dateOfBirth", dateOfBirth)
+				.param("password", password).param("nombre", nombre)
+				.param("apellido", apellido).param("fechaNacimiento", fechaNacimiento)
 				.param("emailAddress", emailAddress);
 		Response response = target.path("signup").request()
 				.post(Entity.form(form));

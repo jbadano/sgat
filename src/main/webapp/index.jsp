@@ -2,11 +2,15 @@
 <head>
 <link href="assets/css/bootstrap-united.css" rel="stylesheet" />
 <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+<script src="jquery-1.8.3.js" /></script>
+<script src="bootstrap/js/bootstrap.js"></script>
 <style>
 body {
 	height: 100%;
 	margin: 0;
-	background: url(assets/img/books.jpg);
+	background: url(assets/img/santander-1440-3.png);
+	background-position: right 180px;
+	background-color: red;
 	background-size: 1440px 800px;
 	background-repeat: no-repeat;
 	display: compact;
@@ -15,7 +19,6 @@ body {
 </head>
 <body>
 	<div class="navbar navbar-default">
-
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse"
 				data-target=".navbar-responsive-collapse">
@@ -25,20 +28,13 @@ body {
 		</div>
 
 		<div class="navbar-collapse collapse navbar-responsive-collapse">
-			<form class="navbar-form navbar-right">
+			<!--<form class="navbar-form navbar-right">
 				<input type="text" class="form-control" placeholder="Search">
-			</form>
+			</form>-->
 			<ul class="nav navbar-nav navbar-right">
 				<li class="active"><a href="#">Home</a></li>
-				<li><a href="webapi/studentResource/signup">Signup</a></li>
-				<li><a href="webapi/studentResource/login">Login</a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Explore<b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Contact us</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Further Actions</a></li>
-					</ul></li>
+				<li><a href="webapi/usuarioResource/signup">Reg&iacute;strate</a></li>
+				<li><a href="webapi/usuarioResource/login">Accede</a></li>				
 			</ul>
 		</div>
 		<!-- /.nav-collapse -->
@@ -46,26 +42,16 @@ body {
 	<div class="container">
 		<div class="jumbotron">
 			<div>
-				<h1>Welcome to Online Student Enrollment!</h1>
-				<p>To get started, you need to enter your details to enroll with
-					us. Or login to access your details, if you are already enrolled.</p>
+				<h1>Sistema Gesti&oacute;n &Aacute;rea Testing!</h1>
+				<p>Sistema para la gesti&oacute;n de requerimientos para &aacute;rea de testing.</p>
 			</div>
 
-			<a class="btn btn-primary" href="webapi/studentResource/signup">Signup
-				» </a> <a class="btn btn-primary" href="webapi/studentResource/login">Login
+			<a class="btn btn-primary" href="webapi/usuarioResource/signup">Reg&iacute;strate
+				» </a> <a class="btn btn-primary" href="webapi/usuarioResource/login">Accede
 				» </a>
 		</div>
 
 		<div></div>
 	</div>
-	<script src="jquery-1.8.3.js">
-		
-	</script>
-
-	<script src="bootstrap/js/bootstrap.js">
-		
-	</script>
-
-
 </body>
 </html>

@@ -30,31 +30,24 @@
 		</div>
 
 		<div class="navbar-collapse collapse navbar-responsive-collapse">
-			<form class="navbar-form navbar-right">
+			<!--<form class="navbar-form navbar-right">
 				<input type="text" class="form-control" placeholder="Search">
-			</form>
+			</form>-->
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/StudentEnrollmentWithREST">Home</a></li>
-				<li><a href="signup">Signup</a></li>
-				<li class="active"><a href="login">Login</a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Explore<b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Contact us</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Further Actions</a></li>
-					</ul></li>
+				<li><a href="">Home</a></li>
+				<li><a href="signup">Reg&iacute;strate</a></li>
+				<li class="active"><a href="login">Accede</a></li>				
 			</ul>
 		</div>
 		<!-- /.nav-collapse -->
 	</div>
 
 	<!-- 
-	<legend>Student Enrollment Login Success</legend>
+	<legend>Usuario Registrado Acceso Correcto</legend>
 	 -->
 	<div class="panel panel-danger">
 		<div class="panel-heading">
-			<h3 class="panel-title">Student Enrollment Login failure</h3>
+			<h3 class="panel-title">Acesso Usuario Fallido</h3>
 		</div>
 		<div class="panel-body">
 			<div class="alert alert-dismissable alert-danger">

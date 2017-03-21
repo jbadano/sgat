@@ -23,7 +23,8 @@
 	margin: 16px;
 }
 </style>
-<title>Student Enrollment Login</title>
+
+<title>Acceso Usuario Registrado</title>
 </head>
 <body>
 	<script src="../../jquery-1.8.3.js">
@@ -45,20 +46,13 @@
 		</div>
 
 		<div class="navbar-collapse collapse navbar-responsive-collapse">
-			<form class="navbar-form navbar-right">
+			<!--<form class="navbar-form navbar-right">
 				<input type="text" class="form-control" placeholder="Search">
-			</form>
+			</form>-->
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/StudentEnrollmentWithREST">Home</a></li>
-				<li><a href="signup">Signup</a></li>
-				<li class="active"><a href="login">Login</a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Explore<b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Contact us</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Further Actions</a></li>
-					</ul></li>
+				<li><a href="">Home</a></li>
+				<li><a href="signup">Reg&iacute;strate</a></li>
+				<li class="active"><a href="login">Accede</a></li>				
 			</ul>
 		</div>
 		<!-- /.nav-collapse -->
@@ -67,8 +61,8 @@
 	<div class="container">
 		<div class="jumbotron">
 			<div>
-				<h1>Welcome to Online Student Enrollment Login</h1>
-				<p>Login to explore the complete features!</p>
+				<h1>Accede a SGAT.</h1>
+				<p>Accede para ver el estado de tus tareas!</p>
 			</div>
 		</div>
 
@@ -83,11 +77,10 @@
 						<form:form id="myForm" method="post" action="login"
 							class="bs-example form-horizontal">
 							<fieldset>
-								<legend>Student Enrollment Login Form</legend>
+								<legend>Formulario de Acceso Usuario</legend>
 
 								<div class="form-group">
-									<label for="userNameInput" class="col-lg-3 control-label">User
-										Name</label>
+									<label for="userNameInput" class="col-lg-3 control-label">UserName</label>
 									<div class="col-lg-9">
 										<input type="text" class="form-control" name="userName"
 											id="userNameInput" placeholder="User Name" />
@@ -103,9 +96,9 @@
 								</div>
 
 								<div class="col-lg-9 col-lg-offset-3">
-									<button class="btn btn-default">Cancel</button>
+									<button class="btn btn-default">Cancelar</button>
 
-									<button class="btn btn-primary">Login</button>
+									<button class="btn btn-primary">Ingresar</button>
 								</div>
 
 							</fieldset>

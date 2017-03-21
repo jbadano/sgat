@@ -6,7 +6,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.stereotype.Component;
 
 @Component
-public class StudentLogin {
+public class UsuarioLogin {
 
 	@NotEmpty
 	@Size(min=4, max=20)

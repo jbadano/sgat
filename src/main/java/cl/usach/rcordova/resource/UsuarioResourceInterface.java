@@ -4,12 +4,12 @@ import java.text.ParseException;
 
 import javax.ws.rs.core.Response;
 
-public interface StudentResourceInterface {
+public interface UsuarioResourceInterface {
 
 	public Response signup();
 
-	public Response signup(String userName, String password, String firstName,
-			String lastName, String dateOfBirth, String emailAddress)
+	public Response signup(String userName, String password, String nombre,
+			String apellido, String fechaNacimiento, String emailAddress)
 			throws ParseException;
 
 	public Response login();

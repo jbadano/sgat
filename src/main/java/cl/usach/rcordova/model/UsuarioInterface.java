@@ -2,7 +2,7 @@ package cl.usach.rcordova.model;
 
 import java.util.Date;
 
-public interface StudentInterface {
+public interface UsuarioInterface {
 
 	public Long getId();
 
@@ -12,13 +12,13 @@ public interface StudentInterface {
 
 	public void setUserName(String userName);
 
-	public String getFirstName();
+	public String getNombre();
 
-	public void setFirstName(String firstName);
+	public void setNombre(String nombre);
 
-	public String getLastName();
+	public String getApellido();
 
-	public void setLastName(String lastName);
+	public void setApellido(String lastName);
 
 	public String getPassword();
 
@@ -28,8 +28,8 @@ public interface StudentInterface {
 
 	public void setEmailAddress(String emailAddress);
 
-	public Date getDateOfBirth();
+	public Date getFechaNacimiento();
 
-	public void setDateOfBirth(Date dateOfBirth);
+	public void setFechaNacimiento(Date fechaNacimiento);
 
 }

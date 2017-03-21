@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Student Enrollment Signup</title>
+<title>Registro de Usuario</title>
 <link href="../../bootstrap/css/bootstrap.css" rel="stylesheet" />
 <link href="../../datepicker/css/datepicker.css" rel="stylesheet" />
 <link href="../../assets/css/bootstrap-united.css" rel="stylesheet" />
@@ -39,6 +39,7 @@
 	margin: 16px;
 }
 </style>
+
 </head>
 <body>
 
@@ -53,20 +54,13 @@
 		</div>
 
 		<div class="navbar-collapse collapse navbar-responsive-collapse">
-			<form class="navbar-form navbar-right">
+			<!--<form class="navbar-form navbar-right">
 				<input type="text" class="form-control" placeholder="Search">
-			</form>
+			</form>-->
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/StudentEnrollmentWithREST">Home</a></li>
-				<li class="active"><a href="signup">Signup</a></li>
-				<li><a href="login">Login</a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Explore<b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Contact us</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Further Actions</a></li>
-					</ul></li>
+				<li><a href="/">Home</a></li>
+				<li class="active"><a href="signup">Reg&iacute;strate</a></li>
+				<li><a href="login">Accede</a></li>
 			</ul>
 		</div>
 		<!-- /.nav-collapse -->
@@ -88,8 +82,8 @@
 	<div class="container">
 		<div class="jumbotron">
 			<div>
-				<h1>Welcome to Online Student Enrollment Signup</h1>
-				<p>Its absolutely quick!</p>
+				<h1>Bienvenido al formulario de registro</h1>
+				<p>Reg&iacute;strate ya!</p>
 			</div>
 		</div>
 
@@ -108,7 +102,7 @@
 						<form:form id="myForm" method="post" action="signup"
 							class="bs-example form-horizontal">
 							<fieldset>
-								<legend>Student Enrollment Signup Form</legend>
+								<legend>Formulario de Registro de Usuario</legend>
 
 								<div class="form-group">
 									<label for="userNameInput" class="col-lg-3 control-label">User
@@ -116,7 +110,7 @@
 									<div class="col-lg-9">
 										<input type="text" class="form-control" name="userName"
 											id="userNameInput" placeholder="User Name"
-											value="${it.student.userName}" />
+											value="${it.usuario.userName}" />
 									</div>
 								</div>
 
@@ -125,41 +119,38 @@
 									<div class="col-lg-9">
 										<input type="password" class="form-control" name="password"
 											id="passwordInput" placeholder="Password"
-											value="${it.student.password}" />
+											value="${it.usuario.password}" />
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="firstNameInput" class="col-lg-3 control-label">First
-										Name</label>
+									<label for="nombreInput" class="col-lg-3 control-label">Nombre</label>
 									<div class="col-lg-9">
-										<input type="text" class="form-control" name="firstName"
-											id="firstNameInput" placeholder="First Name"
-											value="${it.student.firstName}" />
+										<input type="text" class="form-control" name="nombre"
+											id="nombreInput" placeholder="Nombre"
+											value="${it.usuario.nombre}" />
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="lastNameInput" class="col-lg-3 control-label">Last
-										Name</label>
+									<label for="apellidoInput" class="col-lg-3 control-label">Apellido</label>
 									<div class="col-lg-9">
-										<input type="text" class="form-control" name="lastName"
-											id="lastNameInput" placeholder="Last Name"
-											value="${it.student.lastName}" />
+										<input type="text" class="form-control" name="apellido"
+											id="apellidoInput" placeholder="Apellido"
+											value="${it.usuario.apellido}" />
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label for="dateOfBirthInput" class="col-lg-3 control-label">Date
-										of Birth</label>
+									<label for="fechaNacimientoInput" class="col-lg-3 control-label">Fecha de Nacimiento</label>
 									<div class="date form_date col-lg-9"
 										data-date-format="mm/dd/yyyy" data-date-viewmode="years">
 										<c:set var="myDate">
 											<fmt:formatDate pattern="MM/dd/yyyy"
-												value="${it.student.dateOfBirth}" />
+												value="${it.usuario.fechaNacimiento}" />
 										</c:set>
-										<input type="text" class="form-control" name="dateOfBirth"
-											id="dateOfBirthInput" placeholder="Date of Birth"
+										<input type="text" class="form-control" name="fechaNacimiento"
+											id="fechaNacimientoInput" placeholder="Fecha de Nacimiento"
 											value="${myDate}" />
 									</div>
 								</div>
@@ -170,7 +161,7 @@
 									<div class="col-lg-9">
 										<input type="text" class="form-control" name="emailAddress"
 											id="emailAddressInput" placeholder="Email Address"
-											value="${it.student.emailAddress}" />
+											value="${it.usuario.emailAddress}" />
 									</div>
 								</div>
 
@@ -178,26 +169,26 @@
 									<button class="btn btn-default">Cancel</button>
 
 									<button class="btn btn-primary" data-toggle="modal"
-										data-target="#themodal">Submit</button>
+										data-target="#themodal">Registrarse</button>
 									<div id="themodal" class="modal fade" data-backdrop="static">
 										<div class="modal-dialog">
 											<div class="modal-content">
 												<div class="modal-header">
 													<button type="button" class="close" data-dismiss="modal"
 														aria-hidden="true">&times;</button>
-													<h3>Signup Form Submission</h3>
+													<h3>Reg&iacute;strate</h3>
 												</div>
 												<div class="modal-body">
-													<p>Are you sure you want to do this?</p>
+													<p>Est&aacute; seguro que desea continuar?</p>
 													<div class="progress progress-striped active">
 														<div id="doitprogress" class="progress-bar"></div>
 													</div>
 												</div>
 												<div class="modal-footer">
-													<a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+													<a href="#" class="btn btn-default" data-dismiss="modal">Cerrar</a>
 													<input type="submit" value="Yes" id="yesbutton"
-														class="btn btn-primary" data-loading-text="Saving.."
-														data-complete-text="Submit Complete!">
+														class="btn btn-primary" data-loading-text="Guardando.."
+														data-complete-text="Guardado Completo!">
 												</div>
 											</div>
 										</div>
@@ -215,7 +206,7 @@
 
 	<script>
 		$(function() {
-			$('#dateOfBirthInput').datepicker();
+			$('#fechaNacimientoInput').datepicker();
 		});
 	</script>
 

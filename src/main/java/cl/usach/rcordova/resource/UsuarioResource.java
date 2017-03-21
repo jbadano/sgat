@@ -20,18 +20,18 @@ import org.glassfish.jersey.server.mvc.Viewable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import cl.usach.rcordova.model.Student;
-import cl.usach.rcordova.service.StudentService;
+import cl.usach.rcordova.model.Usuario;
+import cl.usach.rcordova.service.UsuarioService;
 
 
 
 @Component
-@Path("studentResource")
+@Path("usuarioResource")
 @XmlRootElement
-public class StudentResource implements StudentResourceInterface {
+public class UsuarioResource implements UsuarioResourceInterface {
 
 	@Autowired
-	private StudentService studentService;
+	private UsuarioService usuarioService;
 
 	@GET
 	@Path("signup")
@@ -46,37 +46,37 @@ public class StudentResource implements StudentResourceInterface {
 	@Produces(MediaType.TEXT_HTML)
 	public Response signup(@FormParam("userName") String userName,
 			@FormParam("password") String password,
-			@FormParam("firstName") String firstName,
-			@FormParam("lastName") String lastName,
-			@FormParam("dateOfBirth") String dateOfBirth,
+			@FormParam("nombre") String nombre,
+			@FormParam("apellido") String apellido,
+			@FormParam("fechaNacimiento") String fechaNacimiento,
 			@FormParam("emailAddress") String emailAddress)
 			throws ParseException {
 
-		if (userName == null || password == null || firstName == null
-				|| lastName == null || dateOfBirth == null
+		if (userName == null || password == null || nombre == null
+				|| apellido == null || fechaNacimiento == null
 				|| emailAddress == null) {
 			return Response.status(Status.PRECONDITION_FAILED).build();
 		}
 
-		Student student = new Student();
-		student.setUserName(userName);
-		student.setPassword(password);
-		student.setFirstName(firstName);
-		student.setLastName(lastName);
+		Usuario usuario = new Usuario();
+		usuario.setUserName(userName);
+		usuario.setPassword(password);
+		usuario.setNombre(nombre);
+		usuario.setApellido(apellido);
 
-		student.setDateOfBirth(new java.sql.Date(new SimpleDateFormat(
-				"MM/dd/yyyy").parse(dateOfBirth.substring(0, 10)).getTime()));
+		usuario.setFechaNacimiento(new java.sql.Date(new SimpleDateFormat(
+				"MM/dd/yyyy").parse(fechaNacimiento.substring(0, 10)).getTime()));
 
-		student.setEmailAddress(emailAddress);
+		usuario.setEmailAddress(emailAddress);
 
-		if (studentService.findByUserName(userName)) {
+		if (usuarioService.findByUserName(userName)) {
 			Map<String, Object> map = new HashMap<String, Object>();
-			map.put("message", "User Name exists. Try another user name");
-			map.put("student", student);
+			map.put("message", "Nombre de usuario existente. Prueba otro user name.");
+			map.put("usuario", usuario);
 			return Response.status(Status.BAD_REQUEST)
 					.entity(new Viewable("/signup", map)).build();
 		} else {
-			studentService.save(student);
+			usuarioService.save(usuario);
 			return Response.ok().entity(new Viewable("/login")).build();
 		}
 	}
@@ -99,7 +99,7 @@ public class StudentResource implements StudentResourceInterface {
 			return Response.status(Status.PRECONDITION_FAILED).build();
 		}
 
-		boolean found = studentService.findByLogin(userName, password);
+		boolean found = usuarioService.findByLogin(userName, password);
 		if (found) {
 			return Response.ok().entity(new Viewable("/success")).build();
 		} else {
