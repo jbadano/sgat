@@ -5,12 +5,12 @@
 
 >Para probar en STS:
 
-1.1.- Botón derecho sobre el proyecto.
-1.2.- Run As --> Maven clean.
-1.3.- Run As --> Maven install.
+-Botón derecho sobre el proyecto.
+-Run As --> Maven clean.
+-Run As --> Maven install.
 
-2.1.- Botón derecho sobre tomcat server en sección servers.
-2.2.- Publish.
-2.3.- Start.
+-Botón derecho sobre tomcat server en sección servers.
+-Publish.
+-Start.
 
 
