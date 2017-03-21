@@ -1,5 +1,5 @@
 
-#SGAT IMPORTANTE:
+**SGAT IMPORTANTE:**
 
 **Ahora en jpaPropertyMap del applicationContext se modifica para que genere la base de datos de forma automática.**
 
