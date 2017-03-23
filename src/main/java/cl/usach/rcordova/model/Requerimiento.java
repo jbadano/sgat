@@ -46,7 +46,7 @@ public class Requerimiento implements RequerimientoInterface {
 	private Usuario usuarioAsignado;
 	
 	@ManyToMany
-	@JoinTable(name="usuario_observador_requerimiento", joinColumns={@JoinColumn(name="req_id")}, inverseJoinColumns={@JoinColumn(name="user_id")})
+	@JoinTable(name="requerimiento_usuario", joinColumns={@JoinColumn(name="req_id")}, inverseJoinColumns={@JoinColumn(name="user_id")})
 	private Collection<Usuario> usuariosObservadores;
 	
 	private String estadoActual;

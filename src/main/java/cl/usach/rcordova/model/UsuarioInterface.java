@@ -1,5 +1,6 @@
 package cl.usach.rcordova.model;
 
+import java.util.Collection;
 import java.util.Date;
 
 public interface UsuarioInterface {
@@ -31,5 +32,9 @@ public interface UsuarioInterface {
 	public Date getFechaNacimiento();
 
 	public void setFechaNacimiento(Date fechaNacimiento);
+	
+	public Collection<Grupo> getGruposUsuario();
+
+	public void setGruposUsuario(Collection<Grupo> gruposUsuario);
 
 }

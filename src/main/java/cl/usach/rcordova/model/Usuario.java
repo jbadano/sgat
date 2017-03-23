@@ -55,6 +55,9 @@ public class Usuario implements UsuarioInterface {
 	@ManyToMany(mappedBy="usuariosObservadores")
     private Collection<Requerimiento> requerimientosObservados;
 	
+	@ManyToMany(mappedBy="miembrosGrupo")
+    private Collection<Grupo> gruposUsuario;
+	
 	public Long getId() {
 		return id;
 	}
@@ -118,6 +121,14 @@ public class Usuario implements UsuarioInterface {
 
 	public void setRequerimientosObservados(Collection<Requerimiento> requerimientosObservados) {
 		this.requerimientosObservados = requerimientosObservados;
+	}
+
+	public Collection<Grupo> getGruposUsuario() {
+		return gruposUsuario;
+	}
+
+	public void setGruposUsuario(Collection<Grupo> gruposUsuario) {
+		this.gruposUsuario = gruposUsuario;
 	}
 
 	
